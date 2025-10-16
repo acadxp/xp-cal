@@ -1,10 +1,126 @@
 # XP-Cal
 
-Repository for calculating user levels and experience points (XP) in gamified applications. It provides utilities and UI components to help you integrate level and XP calculations into your SaaS or web projects.
+A demonstration simulator for the XP calculation system used in the AcadXP platform. This project showcases how experience points, levels, and quests are implemented in our gamified learning environment.
+
+## Overview
+
+XP-Cal simulates the core leveling and quest mechanics of AcadXP, demonstrating how students progress through their learning journey. The calculator helps visualize XP accumulation, level progression, and quest completion rewards.
 
 ## Features
 
-- Level and XP calculation utilities
-- Modern UI with Tailwind CSS and Lucide icons
-- Next.js 15, React 19, TypeScript support
-- Easily customizable and extendable
+- 🧮 Live XP calculation and level progression simulation
+- 📊 Real-time progress tracking with visual feedback
+- 🎯 Interactive quest system demonstration
+- 📈 Level-up animations and notifications
+- 🎨 AcadXP's UI components showcase
+- ⚡ Built with Next.js 15 and React 19
+- 📱 Responsive design matching AcadXP's interface
+
+## Data Structure
+
+### Player Interface
+
+```typescript
+interface Player {
+  id: string;
+  name: string;
+  level: number;
+  currentXP: number;
+  totalXP: number;
+  completedQuests: string[];
+  activeQuests: string[];
+}
+```
+
+### Quest Interface
+
+```typescript
+interface Quest {
+  id: string;
+  title: string;
+  description: string;
+  xpReward: number;
+  requirements: {
+    minLevel?: number;
+    prerequisites?: string[];
+  };
+  type: "DAILY" | "WEEKLY" | "ACHIEVEMENT";
+  status: "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED";
+}
+```
+
+## Quest Examples
+
+```typescript
+export const QUESTS = [
+  {
+    id: "DAILY_LOGIN",
+    title: "Daily Login",
+    description: "Log in to the platform",
+    xpReward: 100,
+    type: "DAILY",
+  },
+  {
+    id: "COMPLETE_LESSON",
+    title: "Complete a Lesson",
+    description: "Finish any lesson module",
+    xpReward: 500,
+    type: "DAILY",
+  },
+  {
+    id: "WEEKLY_PRACTICE",
+    title: "Practice Champion",
+    description: "Complete 10 practice exercises",
+    xpReward: 1000,
+    type: "WEEKLY",
+  },
+];
+```
+
+## Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/acadxp/xp-cal.git
+cd xp-cal
+```
+
+1. Install dependencies:
+
+```bash
+pnpm install
+```
+
+1. Run the development server:
+
+```bash
+pnpm dev
+```
+
+1. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Components
+
+- `ProgressBar`: Visualizes current XP and progress to next level
+- `LevelUpToast`: Displays level-up animations and congratulations
+- `QuestsTable`: Shows available and completed quests
+- `PlusXP`: Animated XP gain indicator
+
+## How It Works
+
+The simulator demonstrates AcadXP's leveling formula:
+
+- Base XP for level 1: 100
+- Each level requires previous level's XP \* 1.5
+- Quest completion adds XP immediately
+- Level-ups are calculated automatically
+- Progress is shown in real-time
+
+## Contributing
+
+This is a demonstration project for AcadXP's mechanics. For feature suggestions or bug reports related to the actual platform, please contact the AcadXP team directly.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
