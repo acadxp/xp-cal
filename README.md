@@ -6,6 +6,16 @@ A demonstration simulator for the XP calculation system used in the AcadXP platf
 
 XP-Cal simulates the core leveling and quest mechanics of AcadXP, demonstrating how students progress through their learning journey. The calculator helps visualize XP accumulation, level progression, and quest completion rewards.
 
+## Screenshots
+
+### Home Screen
+
+![Home Screen](/public/screenshots/home-screen.png)
+
+### XP Calculator
+
+![XP Calculator Screen](/public/screenshots/xp-cal-screen.png)
+
 ## Features
 
 - 🧮 Live XP calculation and level progression simulation
@@ -27,8 +37,6 @@ interface Player {
   level: number;
   currentXP: number;
   totalXP: number;
-  completedQuests: string[];
-  activeQuests: string[];
 }
 ```
 
@@ -40,12 +48,6 @@ interface Quest {
   title: string;
   description: string;
   xpReward: number;
-  requirements: {
-    minLevel?: number;
-    prerequisites?: string[];
-  };
-  type: "DAILY" | "WEEKLY" | "ACHIEVEMENT";
-  status: "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED";
 }
 ```
 
