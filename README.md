@@ -58,23 +58,17 @@ export const QUESTS = [
   {
     id: "DAILY_LOGIN",
     title: "Daily Login",
-    description: "Log in to the platform",
     xpReward: 100,
-    type: "DAILY",
   },
   {
     id: "COMPLETE_LESSON",
     title: "Complete a Lesson",
-    description: "Finish any lesson module",
     xpReward: 500,
-    type: "DAILY",
   },
   {
     id: "WEEKLY_PRACTICE",
     title: "Practice Champion",
-    description: "Complete 10 practice exercises",
     xpReward: 1000,
-    type: "WEEKLY",
   },
 ];
 ```
@@ -121,7 +115,7 @@ The simulator demonstrates AcadXP's leveling formula:
 
 ## Contributing
 
-This is a demonstration project for AcadXP's mechanics. For feature suggestions or bug reports related to the actual platform, please contact the AcadXP team directly.
+This is a demonstration project for AcadXP's mechanics. For feature suggestions or bug reports create an issue. Thanks!
 
 ## License
 
