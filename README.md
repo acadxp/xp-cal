@@ -10,11 +10,11 @@ XP-Cal simulates the core leveling and quest mechanics of AcadXP, demonstrating 
 
 ### Home Screen
 
-![Home Screen](/public/screenshots/home-screen.png)
+![Home Screen](./public/screenshots/home-screen.png)
 
 ### XP Calculator
 
-![XP Calculator Screen](/public/screenshots/xp-cal-screen.png)
+![XP Calculator Screen](./public/screenshots/xp-cal-screen.png)
 
 ## Features
 
